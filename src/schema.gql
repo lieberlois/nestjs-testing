@@ -1,0 +1,27 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Todo {
+  id: Int!
+  text: String!
+  authorId: Int!
+  author: User!
+}
+
+type User {
+  id: Int!
+  name: String!
+}
+
+type Query {
+  users: [User!]!
+  user(id: Int!): User
+  todos: [Todo!]!
+  todo(id: Int!): Todo
+}
+
+type Mutation {
+  createUser(name: String!): User!
+  createTodo(authorId: Int!, text: String!): Todo!
+}
